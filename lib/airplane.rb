@@ -7,12 +7,14 @@ def initialize
 end 
 
 
-def airplane_take_off
+def has_sunny_weather?
+    @weather.state == :sunny
+end
 
-Weather.new == 'sunny'
- 
-	
-	end 
+
+def clear_to_take_off?
+    has_sunny_weather?
+end 
 
 
 end 

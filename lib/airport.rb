@@ -12,7 +12,7 @@ class Airport
 	end 
 
 	def has_sunny_weather?
-    @weather.state == :sunny
+       @weather.state == :sunny
     end
     
 	
@@ -22,16 +22,16 @@ class Airport
 
 
 	def has_space_in_list?
-    list_of_airplanes.count < capacity
+       list_of_airplanes.count < capacity
     end
 
 
 	def clear_to_land?
-    has_space_in_list? and has_sunny_weather?
+       has_space_in_list? and has_sunny_weather?
     end
 
     def land(airplane)
-    @list_of_airplanes << airplane if clear_to_land?
+       @list_of_airplanes << airplane if clear_to_land?
     end
 
 
@@ -42,17 +42,18 @@ class Airport
 
     
     def clear_to_take_off?
-    has_sunny_weather?
+        has_sunny_weather? 
     end
 
 
     def take_off(airplane)
-    @list_of_airplanes.delete(airplane) if clear_to_take_off?
+       @list_of_airplanes.delete(airplane) if clear_to_take_off?
     end
 
 
     def bomb_threats(threats)
 		@threats = threats
+
 	end
 
    

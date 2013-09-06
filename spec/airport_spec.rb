@@ -83,10 +83,10 @@ context 'BOMB Treats are introduced' do
 
 
 	it 'can have a bomb threat and sunny weather but planes cannot take off' do
-		airport.land(airplane)
+		# airport.land(airplane)
 		expect(weather).to receive(:state).and_return :sunny
 		airport.bomb_threats(true)
-		expect(airport.clear_to_take_off?).to be_false
+		expect(airport).not_to be_clear_to_take_off
 	end
 
 
